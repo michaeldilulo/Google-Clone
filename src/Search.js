@@ -12,7 +12,7 @@ function Search() {
     }
 
     return (
-        <div className="search">
+        <form className="search">
             <div className="search__input">
                 <SearchIcon className="search__inputIcon" />
                 <input value={ input} onChange={event => setInput(event.target.value)} />
@@ -20,11 +20,11 @@ function Search() {
             </div>
 
             <div className="search__buttons">
-                <Button onClick={ search} variant="outlined">Google Search</Button>
+                <Button type="submit" onClick={ search} variant="outlined">Google Search</Button>
                 <Button variant="outlined">Im Feeling Lucky</Button>
             </div>
 
-        </div>
+        </form>
     )
 }
 
