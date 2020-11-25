@@ -3,9 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import reducer, { initialState } from "./reducer"
+import {StateProvider} from "./StateProvider"
 
 ReactDOM.render(
   <React.StrictMode>
+    {/* Wrapped App in data layer so we can push information into the data layer, and pull the data whenever we need to  */}
     <StateProvider initialState={initialState} reducer={reducer}>
     <App />
     </StateProvider>
